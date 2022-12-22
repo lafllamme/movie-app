@@ -1,0 +1,16 @@
+{% extends "base.html.twig" %}
+
+
+{% block title %}
+	Movies Page
+{% endblock %}
+
+{% block body %}
+	<div class="bg-blue-500 text-2xl text-center font-bold">
+		{% for movie in movies %}
+			<li>{{movie.title}}</li>
+			<p class="animate-ping">{{movie.releaseYear}}</p>
+		{% endfor %}
+		<img class="p-5 bg-gray-200 border rounded max-w-sm mx-auto mb-4 mt-4" src="{{asset('/build/images/image1.c3b846ce.jpg')}}"/>
+	</div>
+{% endblock %}
